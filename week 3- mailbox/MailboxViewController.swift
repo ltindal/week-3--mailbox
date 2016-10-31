@@ -164,17 +164,25 @@ class MailboxViewController: UIViewController {
                         self.listView.isUserInteractionEnabled = true
                     }
         
+            } else if messageTray.frame.origin.x > 260 {
+                
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.messageTray.center = self.trayOriginalCenter
+                    self.messageFeed.frame.origin.y = self.messageFeed.frame.origin.y - 86
+                }) { (Bool) in
+                    self.messageFeed.frame.origin.y = self.messageFeed.frame.origin.y + 86
+                }
+            }
             } else {
                 //if the user isn't moving the block, put it back to its original location
                 UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 1, options: [], animations: {
                     self.messageTray.center = self.trayOriginalCenter
                 }, completion: nil)
 
-            }
+            } 
             
         }
-        
-    }
+    
     
     @IBAction func didTapListView(_ sender: UITapGestureRecognizer) {
         
