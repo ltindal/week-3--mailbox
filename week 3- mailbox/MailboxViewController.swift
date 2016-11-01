@@ -23,6 +23,11 @@ class MailboxViewController: UIViewController {
     @IBOutlet weak var listView: UIImageView!
     @IBOutlet weak var messageFeed: UIImageView!
     
+    @IBOutlet weak var segmentedController: UISegmentedControl!
+    @IBOutlet weak var laterSection: UIImageView!
+    @IBOutlet weak var archiveSection: UIImageView!
+    @IBOutlet weak var inboxSection: UIView!
+    
     var trayOriginalCenter: CGPoint!
     var traySwipeOffset: CGFloat!
     var traySwipeFromRight: CGPoint!
@@ -47,11 +52,35 @@ class MailboxViewController: UIViewController {
         //assign alpha for pop views
         listView.alpha = 0
         rescheduleView.alpha = 0
+        archiveSection.isHidden = true
+        laterSection.isHidden = true
         
         //this makes the view scroll
         scrollView.contentSize = CGSize(width: 320, height: 1294)
             }
-
+    
+    
+    @IBAction func didPressSegment(_ sender: UISegmentedControl) {
+        switch segmentedController.selectedSegmentIndex {
+        case 0:
+            print("first selected")
+            archiveSection.alpha = 0
+            laterSection.alpha = 1
+            inboxSection.alpha = 0
+        case 1:
+            print("second selected")
+            archiveSection.alpha = 0
+            laterSection.alpha = 0
+            inboxSection.alpha = 1
+        case 2:
+            print("third selected")
+            archiveSection.isHidden = false
+            laterSection.isHidden = true
+            inboxSection.alpha = 0
+        default:
+            break;
+        }
+    }
 
     @IBAction func didPanTray(_ sender: UIPanGestureRecognizer) {
         
@@ -138,14 +167,7 @@ class MailboxViewController: UIViewController {
             
     else if sender.state == .ended {
             
-            if velocity.x > 0 {
-                //if the user is moving the block horizontally to the left, move the center
-                UIView.animate(withDuration: 0.3) {
-                    self.messageTray.center = self.traySwipeFromLeft
-                }
-            }
-                
-                else if messageTray.frame.origin.x < -60 && messageTray.frame.origin.x > -260 {
+            if messageTray.frame.origin.x < -60 && messageTray.frame.origin.x > -260 {
                 //if the user is moving the block horizontally from the right AND they have reached the yellow level, pop the reschedule view
                 UIView.animate(withDuration: 0.3) {
                     self.messageTray.center = self.trayOriginalCenter
@@ -166,12 +188,23 @@ class MailboxViewController: UIViewController {
         
             } else if messageTray.frame.origin.x > 260 {
                 
+                self.messageTray.center = self.trayOriginalCenter
+                
                 UIView.animate(withDuration: 0.3, animations: {
-                    self.messageTray.center = self.trayOriginalCenter
                     self.messageFeed.frame.origin.y = self.messageFeed.frame.origin.y - 86
                 }) { (Bool) in
                     self.messageFeed.frame.origin.y = self.messageFeed.frame.origin.y + 86
                 }
+            } else if messageTray.frame.origin.x > 60 && messageTray.frame.origin.x < 260 {
+                
+                self.messageTray.center = self.trayOriginalCenter
+                
+                UIView.animate(withDuration: 0.3, animations: {
+                    self.messageFeed.frame.origin.y = self.messageFeed.frame.origin.y - 86
+                }) { (Bool) in
+                    self.messageFeed.frame.origin.y = self.messageFeed.frame.origin.y + 86
+                }
+                
             }
             } else {
                 //if the user isn't moving the block, put it back to its original location
@@ -179,7 +212,7 @@ class MailboxViewController: UIViewController {
                     self.messageTray.center = self.trayOriginalCenter
                 }, completion: nil)
 
-            } 
+            }
             
         }
     

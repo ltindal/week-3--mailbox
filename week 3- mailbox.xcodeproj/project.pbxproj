@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3D70F9F61DC17D5300646406 /* MailboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70F9F51DC17D5300646406 /* MailboxViewController.swift */; };
+		3D98C1301DC843460060F49A /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D98C12F1DC843460060F49A /* ComposeViewController.swift */; };
 		3DE1B4FD1DC17C4C007EDC0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE1B4FC1DC17C4C007EDC0E /* AppDelegate.swift */; };
 		3DE1B4FF1DC17C4C007EDC0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE1B4FE1DC17C4C007EDC0E /* ViewController.swift */; };
 		3DE1B5021DC17C4C007EDC0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE1B5001DC17C4C007EDC0E /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		3D70F9F51DC17D5300646406 /* MailboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailboxViewController.swift; sourceTree = "<group>"; };
+		3D98C12F1DC843460060F49A /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		3DE1B4F91DC17C4C007EDC0E /* week 3- mailbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "week 3- mailbox.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE1B4FC1DC17C4C007EDC0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DE1B4FE1DC17C4C007EDC0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				3DE1B4FC1DC17C4C007EDC0E /* AppDelegate.swift */,
 				3DE1B4FE1DC17C4C007EDC0E /* ViewController.swift */,
 				3DE1B5001DC17C4C007EDC0E /* Main.storyboard */,
+				3D98C12F1DC843460060F49A /* ComposeViewController.swift */,
 				3D70F9F51DC17D5300646406 /* MailboxViewController.swift */,
 				3DE1B5031DC17C4C007EDC0E /* Assets.xcassets */,
 				3DE1B5051DC17C4C007EDC0E /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				3DE1B4FF1DC17C4C007EDC0E /* ViewController.swift in Sources */,
 				3DE1B4FD1DC17C4C007EDC0E /* AppDelegate.swift in Sources */,
 				3D70F9F61DC17D5300646406 /* MailboxViewController.swift in Sources */,
+				3D98C1301DC843460060F49A /* ComposeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
