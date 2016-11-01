@@ -204,14 +204,15 @@ class MailboxViewController: UIViewController {
                 }
                 
             }
-            } else {
+            else {
                 //if the user isn't moving the block, put it back to its original location
                 UIView.animate(withDuration: 0.5, delay: 0.1, usingSpringWithDamping: 0.6, initialSpringVelocity: 1, options: [], animations: {
                     self.messageTray.center = self.trayOriginalCenter
-                }, completion: nil)
+                    }, completion: nil)
+                
+            }
 
             }
-            
         }
     
     
