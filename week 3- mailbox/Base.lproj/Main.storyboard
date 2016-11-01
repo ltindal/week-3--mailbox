@@ -125,13 +125,13 @@
                                             <outletCollection property="gestureRecognizers" destination="G0K-el-b8c" appends="YES" id="PfR-HX-gEp"/>
                                         </connections>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Mail - Inbox" id="mtc-Dn-cR5">
-                                        <frame key="frameInset" minY="30" width="320" height="571"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="Mail-Archive" id="Q8p-Gj-oja">
+                                        <frame key="frameInset" minY="135" width="319" height="495"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Mail-Later" id="hGB-NF-HsT">
-                                        <frame key="frameInset" minX="-1" minY="30" width="322" height="568"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="Mail-Later2" id="4Cj-Nh-NoB">
+                                        <frame key="frameInset" minX="-1" minY="130" width="320" height="517"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -142,13 +142,13 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1430"/>
                     <connections>
-                        <outlet property="archiveSection" destination="mtc-Dn-cR5" id="Y1z-us-jga"/>
+                        <outlet property="archiveSection" destination="Q8p-Gj-oja" id="sU8-d7-ods"/>
                         <outlet property="archiveView" destination="ko4-D2-oeo" id="Wrf-cV-YZD"/>
                         <outlet property="checkIcon" destination="9Ug-74-Rpe" id="wkT-jh-9vy"/>
                         <outlet property="imageView" destination="8Oj-GQ-Yfx" id="IMK-wx-zzO"/>
                         <outlet property="inboxSection" destination="xRg-mR-Buc" id="2D6-xd-lna"/>
                         <outlet property="laterIcon" destination="max-V4-wkz" id="z2t-CI-GCC"/>
-                        <outlet property="laterSection" destination="hGB-NF-HsT" id="jg3-1b-hWY"/>
+                        <outlet property="laterSection" destination="4Cj-Nh-NoB" id="IHD-Wx-zOz"/>
                         <outlet property="laterView" destination="qMG-pX-v6U" id="xBH-aN-Lj0"/>
                         <outlet property="listView" destination="FSe-b9-5Is" id="DoZ-Yg-z0u"/>
                         <outlet property="messageFeed" destination="8Oj-GQ-Yfx" id="Qso-uA-Pdx"/>
@@ -220,8 +220,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Mail - Inbox" width="750" height="1334"/>
-        <image name="Mail-Later" width="750" height="1334"/>
+        <image name="Mail-Archive" width="375" height="564"/>
+        <image name="Mail-Later2" width="375" height="569"/>
         <image name="archive_nav_icon" width="25" height="20"/>
         <image name="fakeCompose@2x copy" width="375" height="667"/>
         <image name="feed" width="320" height="1202"/>

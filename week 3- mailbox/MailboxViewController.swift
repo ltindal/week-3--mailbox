@@ -63,20 +63,18 @@ class MailboxViewController: UIViewController {
     @IBAction func didPressSegment(_ sender: UISegmentedControl) {
         switch segmentedController.selectedSegmentIndex {
         case 0:
-            print("first selected")
-            archiveSection.alpha = 0
-            laterSection.alpha = 1
-            inboxSection.alpha = 0
+            print("first selected");
+            laterSection.alpha = 1;
+            laterSection.isHidden = false
+            archiveSection.isHidden = true
         case 1:
             print("second selected")
-            archiveSection.alpha = 0
-            laterSection.alpha = 0
-            inboxSection.alpha = 1
+            laterSection.isHidden = true
+            archiveSection.isHidden = true
         case 2:
             print("third selected")
             archiveSection.isHidden = false
             laterSection.isHidden = true
-            inboxSection.alpha = 0
         default:
             break;
         }
