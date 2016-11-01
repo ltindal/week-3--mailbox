@@ -43,7 +43,7 @@ Time spent: `<11>`
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. N/A
+1. How to get icons to have the fade in animation througout interaction
 2. 
 
 ### Video Walkthrough 
